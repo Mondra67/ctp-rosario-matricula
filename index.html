@@ -13,6 +13,7 @@
 
     <header class="encabezado">
         <div class="contenedor">
+
             <div class="marca">
                 <div class="logo">CTP</div>
 
@@ -28,6 +29,7 @@
                 <a href="#consulta">Consulta</a>
                 <a href="#registros">Registros</a>
             </nav>
+
         </div>
     </header>
 
@@ -36,10 +38,14 @@
 
         <!-- INICIO -->
         <section id="inicio" class="hero">
+
             <div class="contenedor hero-contenido">
 
                 <div>
-                    <span class="etiqueta">PLATAFORMA ACADÉMICA</span>
+
+                    <span class="etiqueta">
+                        PLATAFORMA ACADÉMICA
+                    </span>
 
                     <h2>
                         Sistema de matrícula
@@ -47,11 +53,12 @@
                     </h2>
 
                     <p>
-                        Plataforma demostrativa para el registro y consulta
+                        Plataforma para el registro y consulta
                         de matrículas estudiantiles.
                     </p>
 
                     <div class="botones">
+
                         <a href="#matricula" class="boton principal">
                             Registrar matrícula
                         </a>
@@ -59,41 +66,56 @@
                         <a href="#consulta" class="boton secundario">
                             Consultar matrícula
                         </a>
+
                     </div>
+
                 </div>
 
+
                 <div class="tarjeta-info">
-                    <div class="icono-grande">🎓</div>
-                    <h3>Bienvenido</h3>
+
+                    <div class="icono-grande">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Bienvenido
+                    </h3>
 
                     <p>
-                        Utilice este sistema para registrar o consultar
-                        información de matrícula.
+                        Utilice este sistema para registrar
+                        o consultar información de matrícula.
                     </p>
 
                     <div class="estado">
                         <span></span>
                         Sistema disponible
                     </div>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- MATRÍCULA -->
+        <!-- REGISTRO -->
         <section id="matricula" class="seccion">
+
             <div class="contenedor">
 
                 <div class="titulo-seccion">
+
                     <span>01</span>
 
                     <div>
                         <h2>Registrar matrícula</h2>
+
                         <p>
                             Complete todos los campos del formulario.
                         </p>
                     </div>
+
                 </div>
 
 
@@ -104,6 +126,7 @@
                         <div class="fila">
 
                             <div class="campo">
+
                                 <label for="nombre">
                                     Nombre completo
                                 </label>
@@ -114,10 +137,12 @@
                                     placeholder="Ej. Juan Pérez Rodríguez"
                                     required
                                 >
+
                             </div>
 
 
                             <div class="campo">
+
                                 <label for="cedula">
                                     Número de cédula
                                 </label>
@@ -128,6 +153,7 @@
                                     placeholder="Ej. 1-2345-6789"
                                     required
                                 >
+
                             </div>
 
                         </div>
@@ -136,6 +162,7 @@
                         <div class="fila">
 
                             <div class="campo">
+
                                 <label for="fechaNacimiento">
                                     Fecha de nacimiento
                                 </label>
@@ -145,57 +172,55 @@
                                     id="fechaNacimiento"
                                     required
                                 >
+
                             </div>
 
 
                             <div class="campo">
+
                                 <label for="especialidad">
                                     Especialidad
                                 </label>
 
-                                <select id="especialidad" required>
+                                <select
+                                    id="especialidad"
+                                    required
+                                >
 
                                     <option value="">
                                         Seleccione una especialidad
                                     </option>
 
-                                    <option value="Informática Empresarial">
-                                        Informática Empresarial
+                                    <option value="Informática">
+                                        Informática
                                     </option>
 
-                                    <option value="Contabilidad">
-                                        Contabilidad
+                                    <option value="Ejecutivo">
+                                        Ejecutivo
                                     </option>
 
-                                    <option value="Electrónica">
-                                        Electrónica
-                                    </option>
-
-                                    <option value="Administración">
-                                        Administración
-                                    </option>
-
-                                    <option value="Turismo">
-                                        Turismo
-                                    </option>
-
-                                    <option value="Otra">
-                                        Otra
+                                    <option value="Logística">
+                                        Logística
                                     </option>
 
                                 </select>
+
                             </div>
 
                         </div>
 
 
                         <div class="aviso">
-                            <strong>ℹ Información</strong>
+
+                            <strong>
+                                ℹ Información
+                            </strong>
 
                             <p>
-                                Este sistema forma parte de un proyecto
-                                académico de programación.
+                                Este sistema forma parte de un
+                                proyecto académico de programación.
                             </p>
+
                         </div>
 
 
@@ -211,6 +236,7 @@
                 </div>
 
             </div>
+
         </section>
 
 
@@ -220,16 +246,22 @@
             <div class="contenedor">
 
                 <div class="titulo-seccion">
+
                     <span>02</span>
 
                     <div>
-                        <h2>Consultar matrícula</h2>
+
+                        <h2>
+                            Consultar matrícula
+                        </h2>
 
                         <p>
                             Introduzca el número de cédula
                             para consultar una matrícula.
                         </p>
+
                     </div>
+
                 </div>
 
 
@@ -253,9 +285,10 @@
                     </div>
 
 
-                    <div id="resultadoConsulta"
-                         class="resultado oculto">
-                    </div>
+                    <div
+                        id="resultadoConsulta"
+                        class="resultado oculto"
+                    ></div>
 
                 </div>
 
@@ -270,16 +303,46 @@
             <div class="contenedor">
 
                 <div class="titulo-seccion">
+
                     <span>03</span>
 
                     <div>
-                        <h2>Matrículas registradas</h2>
+
+                        <h2>
+                            Matrículas registradas
+                        </h2>
 
                         <p>
-                            Consulte los registros almacenados
-                            en el sistema.
+                            Registros almacenados en el sistema.
                         </p>
+
                     </div>
+
+                </div>
+
+
+                <div class="estadisticas">
+
+                    <div class="estadistica">
+                        <strong id="cantidadRegistros">0</strong>
+                        <span>Matrículas registradas</span>
+                    </div>
+
+                    <div class="estadistica">
+                        <strong id="cantidadInformatica">0</strong>
+                        <span>Informática</span>
+                    </div>
+
+                    <div class="estadistica">
+                        <strong id="cantidadEjecutivo">0</strong>
+                        <span>Ejecutivo</span>
+                    </div>
+
+                    <div class="estadistica">
+                        <strong id="cantidadLogistica">0</strong>
+                        <span>Logística</span>
+                    </div>
+
                 </div>
 
 
@@ -288,6 +351,7 @@
                     <table>
 
                         <thead>
+
                             <tr>
                                 <th>Nombre</th>
                                 <th>Cédula</th>
@@ -295,6 +359,7 @@
                                 <th>Especialidad</th>
                                 <th>Acción</th>
                             </tr>
+
                         </thead>
 
                         <tbody id="tablaMatriculas">
@@ -316,17 +381,23 @@
         <div class="contenedor footer-contenido">
 
             <div>
-                <strong>CTP Rosario de Naranjo</strong>
+
+                <strong>
+                    CTP Rosario de Naranjo
+                </strong>
 
                 <p>
                     Sistema académico de matrícula
                 </p>
+
             </div>
 
 
             <div class="desarrollador">
 
-                <span>Desarrollado por</span>
+                <span>
+                    Desarrollado por
+                </span>
 
                 <strong>
                     Jeffry Fuentes
@@ -335,6 +406,7 @@
             </div>
 
         </div>
+
 
         <div class="copyright">
 
