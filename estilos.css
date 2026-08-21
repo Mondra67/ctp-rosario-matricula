@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    background: #073b74;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.encabezado .contenedor {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #f4c430;
+    color: #073b74;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.marca h1 {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+
+.marca p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #f4c430;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(135deg, #073b74, #0b5ba7);
+    color: white;
+    padding: 85px 0;
+}
+
+.hero-contenido {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: rgba(244, 196, 48, 0.15);
+    color: #ffd95a;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero h2 span {
+    display: block;
+    color: #f4c430;
+}
+
+.hero p {
+    max-width: 620px;
+    font-size: 18px;
+    color: #e1ecf7;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.boton {
+    display: inline-block;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.principal {
+    background: #f4c430;
+    color: #073b74;
+}
+
+.principal:hover {
+    background: #ffd95a;
+}
+
+.secundario {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.secundario:hover {
+    background: white;
+    color: #073b74;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.tarjeta-info {
+    background: white;
+    color: #172033;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.icono-grande {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-info p {
+    font-size: 15px;
+    color: #667085;
+    margin-bottom: 22px;
+}
+
+.estado {
+    background: #ecfdf3;
+    color: #087443;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.estado span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #16a34a;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 75px 0;
+}
+
+.fondo {
+    background: #edf2f8;
+}
+
+.titulo-seccion {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion > span {
+    color: #0b5ba7;
+    font-size: 14px;
+    font-weight: 900;
+    background: #e2edf8;
+    padding: 8px 11px;
+    border-radius: 7px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.titulo-seccion p {
+    color: #667085;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario-contenedor {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(25, 45, 75, 0.08);
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select,
+.busqueda input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d6dce5;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: #172033;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus,
+.busqueda input:focus {
+    border-color: #0b5ba7;
+    box-shadow: 0 0 0 3px rgba(11,91,167,0.1);
+}
+
+.aviso {
+    background: #fff8df;
+    border-left: 4px solid #f4c430;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 25px 0;
+}
+
+.aviso strong {
+    color: #805f00;
+}
+
+.aviso p {
+    color: #665b38;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.boton-formulario {
+    width: 100%;
+    font-size: 15px;
+}
+
+
+/* =========================
+   CONSULTA
+========================= */
+
+.consulta-contenedor {
+    max-width: 850px;
+}
+
+.busqueda {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 7px 25px rgba(25,45,75,0.08);
+}
+
+.resultado {
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 7px 25px rgba(25,45,75,0.08);
+}
+
+.resultado.exito {
+    border-left: 5px solid #16a34a;
+}
+
+.resultado.error {
+    border-left: 5px solid #dc2626;
+}
+
+.resultado h3 {
+    margin-bottom: 10px;
+}
+
+.resultado p {
+    margin: 5px 0;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-contenedor {
+    background: white;
+    border-radius: 15px;
+    overflow-x: auto;
+    box-shadow: 0 8px 30px rgba(25,45,75,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+thead {
+    background: #073b74;
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+}
+
+th {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.boton-eliminar {
+    border: none;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #061f3b;
+    color: white;
+}
+
+.footer-contenido {
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-contenido p {
+    color: #a9bdd1;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.desarrollador {
+    text-align: right;
+}
+
+.desarrollador span {
+    display: block;
+    color: #a9bdd1;
+    font-size: 12px;
+}
+
+.desarrollador strong {
+    color: #f4c430;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 15px;
+    color: #9fb3c8;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .encabezado .contenedor {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .fila {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .desarrollador {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .contenedor {
+        width: 92%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .formulario-contenedor {
+        padding: 22px;
+    }
+
+    .busqueda {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 26px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
