@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CTP Rosario de Naranjo | Sistema de Matrícula</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <div class="marca">
+                <div class="logo">CTP</div>
+
+                <div>
+                    <h1>CTP Rosario de Naranjo</h1>
+                    <p>Sistema de Matrícula</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#matricula">Matrícula</a>
+                <a href="#consulta">Consulta</a>
+                <a href="#registros">Registros</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
+            <div class="contenedor hero-contenido">
+
+                <div>
+                    <span class="etiqueta">PLATAFORMA ACADÉMICA</span>
+
+                    <h2>
+                        Sistema de matrícula
+                        <span>CTP Rosario de Naranjo</span>
+                    </h2>
+
+                    <p>
+                        Plataforma demostrativa para el registro y consulta
+                        de matrículas estudiantiles.
+                    </p>
+
+                    <div class="botones">
+                        <a href="#matricula" class="boton principal">
+                            Registrar matrícula
+                        </a>
+
+                        <a href="#consulta" class="boton secundario">
+                            Consultar matrícula
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-info">
+                    <div class="icono-grande">🎓</div>
+                    <h3>Bienvenido</h3>
+
+                    <p>
+                        Utilice este sistema para registrar o consultar
+                        información de matrícula.
+                    </p>
+
+                    <div class="estado">
+                        <span></span>
+                        Sistema disponible
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- MATRÍCULA -->
+        <section id="matricula" class="seccion">
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <span>01</span>
+
+                    <div>
+                        <h2>Registrar matrícula</h2>
+                        <p>
+                            Complete todos los campos del formulario.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="formulario-contenedor">
+
+                    <form id="formularioMatricula">
+
+                        <div class="fila">
+
+                            <div class="campo">
+                                <label for="nombre">
+                                    Nombre completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    placeholder="Ej. Juan Pérez Rodríguez"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="cedula">
+                                    Número de cédula
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cedula"
+                                    placeholder="Ej. 1-2345-6789"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="fila">
+
+                            <div class="campo">
+                                <label for="fechaNacimiento">
+                                    Fecha de nacimiento
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fechaNacimiento"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="especialidad">
+                                    Especialidad
+                                </label>
+
+                                <select id="especialidad" required>
+
+                                    <option value="">
+                                        Seleccione una especialidad
+                                    </option>
+
+                                    <option value="Informática Empresarial">
+                                        Informática Empresarial
+                                    </option>
+
+                                    <option value="Contabilidad">
+                                        Contabilidad
+                                    </option>
+
+                                    <option value="Electrónica">
+                                        Electrónica
+                                    </option>
+
+                                    <option value="Administración">
+                                        Administración
+                                    </option>
+
+                                    <option value="Turismo">
+                                        Turismo
+                                    </option>
+
+                                    <option value="Otra">
+                                        Otra
+                                    </option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="aviso">
+                            <strong>ℹ Información</strong>
+
+                            <p>
+                                Este sistema forma parte de un proyecto
+                                académico de programación.
+                            </p>
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="boton principal boton-formulario"
+                        >
+                            Registrar matrícula
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONSULTA -->
+        <section id="consulta" class="seccion fondo">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <span>02</span>
+
+                    <div>
+                        <h2>Consultar matrícula</h2>
+
+                        <p>
+                            Introduzca el número de cédula
+                            para consultar una matrícula.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="consulta-contenedor">
+
+                    <div class="busqueda">
+
+                        <input
+                            type="text"
+                            id="cedulaConsulta"
+                            placeholder="Ingrese el número de cédula"
+                        >
+
+                        <button
+                            onclick="consultarMatricula()"
+                            class="boton principal"
+                        >
+                            Buscar
+                        </button>
+
+                    </div>
+
+
+                    <div id="resultadoConsulta"
+                         class="resultado oculto">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REGISTROS -->
+        <section id="registros" class="seccion">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <span>03</span>
+
+                    <div>
+                        <h2>Matrículas registradas</h2>
+
+                        <p>
+                            Consulte los registros almacenados
+                            en el sistema.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Cédula</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Especialidad</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaMatriculas">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="contenedor footer-contenido">
+
+            <div>
+                <strong>CTP Rosario de Naranjo</strong>
+
+                <p>
+                    Sistema académico de matrícula
+                </p>
+            </div>
+
+
+            <div class="desarrollador">
+
+                <span>Desarrollado por</span>
+
+                <strong>
+                    Jeffry Fuentes
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 CTP Rosario de Naranjo —
+            Proyecto académico
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
